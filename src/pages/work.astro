@@ -1,0 +1,463 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: "God of War: Ragnarök",
+    studio: "Santa Monica Studio",
+    studioSlug: "santa-monica-studio",
+    role: "Narrative Designer & Writer",
+    year: "2022",
+    description: "Contributed to the narrative design, story, and dialogue for the sequel to the 2018 Game of the Year. Won The Game Awards Best Narrative and earned multiple BAFTA nominations.",
+    image: "/images/games/gow-ragnarok.jpg",
+    tags: ["Narrative Design", "Writing", "AAA"],
+  },
+  {
+    title: "God of War (2018)",
+    studio: "Santa Monica Studio",
+    studioSlug: "santa-monica-studio",
+    role: "Narrative Designer & Writer",
+    year: "2018",
+    description: "Part of the narrative team that reinvented the franchise. Won the 2019 WGA Award for Outstanding Video Game Writing and numerous other accolades.",
+    image: "/images/games/god-of-war.webp",
+    tags: ["Narrative Design", "Writing", "AAA"],
+  },
+  {
+    title: "Horizon Forbidden West",
+    studio: "Guerrilla Games",
+    studioSlug: "guerrilla-games",
+    role: "Narrative Designer",
+    year: "2022",
+    description: "Worked on quest narrative and world storytelling for the open-world sequel, designing narrative systems and writing quest content.",
+    image: "/images/games/horizon-fw.jpg",
+    tags: ["Narrative Design", "Quest Design", "AAA"],
+  },
+  {
+    title: "Night School Studio",
+    studio: "Night School Studio",
+    studioSlug: "night-school-studio",
+    role: "Lead Narrative Designer",
+    year: "",
+    description: "Led narrative design at the studio known for Oxenfree and Afterparty, overseeing story direction and narrative systems.",
+    image: "",
+    tags: ["Lead", "Narrative Design", "Indie"],
+  },
+  {
+    title: "Call of Duty: Advanced Warfare",
+    studio: "Sledgehammer Games",
+    studioSlug: "sledgehammer-games",
+    role: "Dialog Supervisor",
+    year: "2014",
+    description: "Supervised the dialogue pipeline and production for the AAA shooter, coordinating voice talent and ensuring script-to-screen quality.",
+    image: "",
+    tags: ["Dialog", "VO Production", "AAA"],
+  },
+  {
+    title: "Uncharted 4: A Thief's End",
+    studio: "Naughty Dog / Sony PlayStation",
+    studioSlug: "playstation",
+    role: "Casting & Talent Coordinator",
+    year: "2016",
+    description: "Coordinated casting and voice talent for Naughty Dog's critically acclaimed action-adventure title.",
+    image: "",
+    tags: ["Casting", "VO Production", "AAA"],
+  },
+  {
+    title: "Uncharted: The Lost Legacy",
+    studio: "Naughty Dog / Sony PlayStation",
+    studioSlug: "playstation",
+    role: "Dialog Coordinator & Editor",
+    year: "2017",
+    description: "Managed dialogue editing and coordination for the standalone Uncharted expansion.",
+    image: "",
+    tags: ["Dialog", "VO Production", "AAA"],
+  },
+];
+
+const speaking = [
+  {
+    title: "Write Between the Lines",
+    event: "GDC 2026 — Game Narrative Summit",
+    description: "How to tell stories in a distracted, polarized, media illiterate world. Co-presented with Alexa Ray Corriea.",
+    url: "https://schedule.gdconf.com/session/write-between-the-lines-writing-games-for-a-media-illiterate-world/914283",
+    note: "",
+  },
+  {
+    title: "Storytelling Through Systems",
+    event: "GDC 2025 - Game Narrative Summit",
+    description: "Exploring how narrative design can leverage game systems to create emergent storytelling.",
+    url: "https://gdcvault.com/play/1035190/Game-Narrative-Summit-Storytelling-Through",
+    note: "GDC Vault access required",
+  },
+  {
+    title: "A Dialogue About Dialog",
+    event: "GameSoundCon 2024",
+    description: "Drawing on my experience in VO and narrative, I explore the history of dialogue in video games and share practical advice for narrative and audio teams to better collaborate in AAA.",
+    url: "https://drive.google.com/file/d/1CCbiCg09TVtac2rdiHcO8KZxpcFLtoLD/view?usp=sharing",
+    note: "",
+  },
+];
+---
+
+<BaseLayout title="Work — Adam Dolin" description="Portfolio of Adam Dolin's game writing, narrative design, and consulting work.">
+
+  <section class="section work-header">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Portfolio</span>
+        <h1>Work &amp; Credits</h1>
+        <div class="header-buttons">
+          <a href="/files/adam-dolin-resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Resume (PDF) &rarr;</a>
+          <a href="https://www.mobygames.com/person/402280/adam-dolin/credits/" target="_blank" rel="noopener" class="btn btn-outline">View Full Credits on MobyGames &rarr;</a>
+          <a href="https://www.imdb.com/name/nm3514065/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_adam%2520dolin" target="_blank" rel="noopener" class="btn btn-outline">View Some Other Credits on IMDB &rarr;</a>
+          <a href="https://www.linkedin.com/in/adamdolin/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="subsection-title">Writing Samples</h2>
+
+      <div class="grid grid-3">
+        <a href="/work/prose" class="card writing-card">
+          <h3>Prose</h3>
+          <p>Short stories and flash fiction.</p>
+          <span class="project-link">Read &rarr;</span>
+        </a>
+        <a href="/work/screenwriting" class="card writing-card">
+          <h3>Screenwriting</h3>
+          <p>Short screenplays and writing test submissions.</p>
+          <span class="project-link">Read &rarr;</span>
+        </a>
+        <a href="/work/interactive-fiction" class="card writing-card">
+          <h3>Interactive</h3>
+          <p>YouTube links for published projects, Twine games, and other interactive narratives.</p>
+          <span class="project-link">Play &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching & Talks -->
+  <section class="section speaking-section" style="padding-top: var(--space-2xl);">
+    <div class="container">
+      <h2 class="subsection-title">Teaching &amp; Talks</h2>
+
+      <div class="grid grid-3">
+        <div class="card talk-card elvtr-card">
+          <span class="talk-event">ELVTR</span>
+          <h3>Become a Game Writer</h3>
+          <p>A 6-week online course where I share every lesson I've learned throughout my career on how to be a successful game writer.</p>
+          <div class="elvtr-links">
+            <a href="https://us.elvtr.com/course/become-game-writer" target="_blank" rel="noopener" class="project-link">Learn More at ELVTR &rarr;</a>
+            <a href="/files/elvtr-satisfaction-survey.pdf" target="_blank" rel="noopener" class="project-link">Student Satisfaction Survey &rarr;</a>
+          </div>
+        </div>
+        {speaking.map((talk) => (
+          <a href={talk.url} target="_blank" rel="noopener" class="card talk-card">
+            <span class="talk-event">{talk.event}</span>
+            <h3>{talk.title}</h3>
+            <p>{talk.description}</p>
+            {talk.note && <span class="talk-note">{talk.note}</span>}
+            <span class="project-link">Watch &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Projects -->
+  <section class="section" style="padding-top: var(--space-2xl);">
+    <div class="container">
+      <h2 class="subsection-title">Personal Projects</h2>
+      <p class="section-intro">Side projects, experiments, and things I build for fun.</p>
+
+      <div class="grid grid-3">
+        <a href="https://whatrmyvalues.com" target="_blank" rel="noopener" class="card personal-project-card">
+          <span class="label">Web App</span>
+          <h3>whatrmyvalues.com</h3>
+          <p>An interactive values exploration tool to help people identify and prioritize what matters most to them.</p>
+          <span class="project-link">Visit site &rarr;</span>
+        </a>
+
+        <a href="https://gamedevkaraoke.com" target="_blank" rel="noopener" class="card personal-project-card">
+          <span class="label">Web App</span>
+          <h3>gamedevkaraoke.com</h3>
+          <p>A website I built for an upcoming karaoke night during the Game Developer's Conference.</p>
+          <span class="project-link">Visit site &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Tighten section gaps on the work page */
+  .work-header {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .work-header .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .speaking-section,
+  :global(.section) + .section {
+    padding-top: var(--space-2xl);
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .subsection-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Projects */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .project-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: border-color var(--transition-base);
+  }
+
+  .project-row:hover {
+    border-color: var(--color-accent);
+  }
+
+  .project-image {
+    width: 200px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-surface);
+    flex-shrink: 0;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-image-placeholder span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-dim);
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+
+  .project-studio {
+    font-size: 0.8125rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .project-year {
+    font-size: 0.8125rem;
+    color: var(--color-text-dim);
+  }
+
+  .project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .project-role {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .tag {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 100px;
+    background: var(--color-accent-dim);
+    color: var(--color-accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Speaking */
+  .speaking-section {
+  }
+
+  .talk-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-base);
+  }
+
+  .talk-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .talk-note {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    font-style: italic;
+    margin-bottom: var(--space-xs);
+  }
+
+  .talk-event {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+  }
+
+  .talk-card h3 {
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .talk-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  /* Teaching */
+  .teaching-card {
+    max-width: 640px;
+  }
+
+  .teaching-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .teaching-content p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  /* Writing Samples */
+  .writing-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition-base);
+  }
+
+  .writing-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .writing-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .writing-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .elvtr-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .elvtr-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-top: auto;
+  }
+
+  .elvtr-links a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  /* Personal Projects */
+  .personal-project-card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personal-project-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .personal-project-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+
+  .placeholder-project {
+    border-style: dashed;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    .project-row {
+      grid-template-columns: 1fr;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 160px;
+    }
+  }
+</style>

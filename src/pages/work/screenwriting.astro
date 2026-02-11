@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Screenwriting — Adam Dolin" description="Screenplays and writing test submissions by Adam Dolin.">
+
+  <section class="section">
+    <div class="container">
+      <a href="/work" class="back-link">&larr; Back to Work</a>
+
+      <div class="section-header">
+        <span class="label">Writing Samples</span>
+        <h1>Screenwriting</h1>
+        <p class="page-intro">Various short screenplays and writing test submissions.</p>
+      </div>
+
+      <div class="items-list">
+        <a href="/files/kill-bill-alternate-scene.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">Writing Test</span>
+          <h2>Kill Bill &mdash; Alternate Scene</h2>
+          <p>A studio writing test: rewriting a scene from a popular action movie where a character makes a different choice. This submission resulted in an offer.</p>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/Worm's%20Junk%20Shop.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">Writing Test</span>
+          <h2>Worm&rsquo;s Junk Shop</h2>
+          <p>A writing test submission for a sci-fi action-adventure game that resulted in an offer.</p>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/NYC%20Midnight%20Screenwriting%202025%20-%20Dead%20Air.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">NYC Midnight &mdash; 2025</span>
+          <h2>Dead Air</h2>
+          <p>A group of backpackers break into an abandoned bunker, only to discover that some echoes of history are better left buried.</p>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+      </div>
+
+      <h2 class="category-heading">Comedy Sketches</h2>
+
+      <div class="items-list">
+        <a href="/files/Death%20and%20Boardgames.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">Comedy Sketch</span>
+          <h2>Death and Boardgames</h2>
+          <p>Matt brings an unexpected guest to board game night.</p>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/Lasers%20and%20Dragons%20and%20Shit.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">Comedy Sketch</span>
+          <h2>Lasers &amp; Dragons &amp; Shit</h2>
+          <p>A Game of Thrones parody trailer.</p>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+
+  .page-intro {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  .items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .item-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition-base);
+  }
+
+  .item-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .item-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .item-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .category-heading {
+    font-size: 1.0625rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-xs);
+  }
+
+  .project-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+</style>

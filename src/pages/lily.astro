@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const photos = [
+  '/images/lily/IMG_9520.jpeg',
+  '/images/lily/IMG_6547.JPG',
+  '/images/lily/FullSizeRender.jpeg',
+  '/images/lily/IMG_0224.JPG',
+  '/images/lily/IMG_1096.JPG',
+  '/images/lily/IMG_1098.JPG',
+  '/images/lily/IMG_6524.JPG',
+  '/images/lily/IMG_6569.JPG',
+  '/images/lily/IMG_6583.JPG',
+  '/images/lily/IMG_7094.jpeg',
+  '/images/lily/IMG_9570.JPG',
+  '/images/lily/IMG_9880.JPG',
+];
+---
+
+<BaseLayout title="Lily — Adam Dolin's Pug" description="Meet Lily, the world's best pug.">
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header lily-header">
+        <span class="label">The Real Star</span>
+        <h1>Lily</h1>
+        <p>She's a pug. She's perfect. That's it. That's the page.</p>
+      </div>
+
+      <div class="lily-grid">
+        {photos.map((photo, i) => (
+          <div class="lily-photo">
+            <img src={photo} alt={`Lily the pug photo ${i + 1}`} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .lily-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .lily-header p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+  }
+
+  .lily-grid {
+    columns: 3;
+    column-gap: var(--space-md);
+  }
+
+  .lily-photo {
+    break-inside: avoid;
+    margin-bottom: var(--space-md);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-surface);
+  }
+
+  .lily-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .lily-photo:hover img {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    .lily-grid {
+      columns: 2;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lily-grid {
+      columns: 1;
+    }
+  }
+</style>

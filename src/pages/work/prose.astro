@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Prose — Adam Dolin" description="Short stories and flash fiction by Adam Dolin.">
+
+  <section class="section">
+    <div class="container">
+      <a href="/work" class="back-link">&larr; Back to Work</a>
+
+      <div class="section-header">
+        <span class="label">Writing Samples</span>
+        <h1>Prose</h1>
+        <p class="page-intro">Short stories and flash fiction.</p>
+      </div>
+
+      <h2 class="category-heading">NYC Midnight</h2>
+      <p class="category-desc">Written under competition constraints for the NYC Midnight writing challenges. Each piece is written within strict time limits, assigned genres, and mandatory story elements.</p>
+
+      <div class="items-list">
+        <a href="/files/suburban-exfiltration.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">2024 &mdash; 250-Word Micro-Fiction</span>
+          <h3>Suburban Exfiltration</h3>
+          <p>Winning entry for the first round of 2024 NYC Midnight's 250-Word Micro-fiction contest.</p>
+          <div class="project-tags">
+            <span class="tag">Micro-Fiction</span>
+            <span class="tag">Round 1 Winner</span>
+          </div>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/Microfiction%202024%20R2.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">2024 &mdash; 250-Word Micro-Fiction</span>
+          <h3>The Captive King</h3>
+          <p>Aboard the HMS Revolution, Captain Cook's crew grows superstitious after abducting the king of Hawai&#699;i&mdash;while their captive watches the gathering storm with quiet amusement.</p>
+          <div class="project-tags">
+            <span class="tag">Micro-Fiction</span>
+            <span class="tag">Round 2</span>
+          </div>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/250%20words%20-%20December%20-%20I%20wonder.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">2024 &mdash; 250-Word Micro-Fiction</span>
+          <h3>I Wonder&hellip;</h3>
+          <p>A med student reflects on the childhood trauma of witnessing their grandmother's fatal heart attack in an elevator&mdash;and the haunting question that followed them into adulthood.</p>
+          <div class="project-tags">
+            <span class="tag">Micro-Fiction</span>
+            <span class="tag">Horror</span>
+          </div>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/Rifan%20Plays%20for%20Ahmed's%20Birthday.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">2024 &mdash; 500-Word Micro-Fiction</span>
+          <h3>Rifan Plays for Ahmed&rsquo;s Birthday</h3>
+          <p>A young girl wants to play the oud for her music teacher on his birthday, but settles for a different audience.</p>
+          <div class="project-tags">
+            <span class="tag">Micro-Fiction</span>
+            <span class="tag">Drama</span>
+          </div>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+
+        <a href="/files/The%20Dinner%20Invitation.pdf" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">2024 &mdash; Flash Fiction</span>
+          <h3>The Dinner Invitation</h3>
+          <p>While delivering a hallway violation notice, Lena is unexpectedly invited into the lavish home of a Russian family. But the family's hospitality is overshadowed by a simmering violent tension.</p>
+          <div class="project-tags">
+            <span class="tag">Flash Fiction</span>
+            <span class="tag">Thriller</span>
+          </div>
+          <span class="project-link">Read PDF &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+
+  .page-intro {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  .category-heading {
+    font-size: 1.0625rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-xs);
+  }
+
+  .category-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+    max-width: 640px;
+  }
+
+  .items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .item-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition-base);
+  }
+
+  .item-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .item-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .item-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  .tag {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 100px;
+    background: var(--color-accent-dim);
+    color: var(--color-accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .project-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+</style>

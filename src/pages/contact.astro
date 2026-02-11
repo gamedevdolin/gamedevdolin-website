@@ -1,0 +1,252 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact — Adam Dolin" description="Get in touch with Adam Dolin for narrative design consulting, writing, and game development services.">
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="label">Contact</span>
+          <h1>Let's talk.</h1>
+          <p class="contact-intro">
+            Whether you have a specific project in mind, want to explore what working together might look like,
+            or just want to say hi — I'm happy to hear from you.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>Email</h3>
+              <a href="mailto:adam@gamedevdolin.com">adam@gamedevdolin.com</a>
+            </div>
+
+            <div class="contact-method">
+              <h3>Social</h3>
+              <div class="social-links">
+                <a href="https://linkedin.com/in/adamdolin" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://bsky.app/profile/adamdolin.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <h3>Discord</h3>
+              <div class="discord-info">
+                <button class="discord-reveal-btn btn btn-outline" id="discord-btn">Show Discord handle</button>
+                <div class="discord-details" id="discord-details">
+                  <span class="discord-handle">@adamdolin</span>
+                  <p class="discord-note">Feel free to add me, but please send a message introducing yourself &mdash; I don't accept friend requests from strangers who don't say hello first.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <h3>Response Time</h3>
+              <p>I typically respond within 1-2 business days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form card" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject">
+                <option value="">Select a topic...</option>
+                <option value="consulting">Consulting / Project Work</option>
+                <option value="coaching">Coaching / Mentorship</option>
+                <option value="speaking">Speaking / Events</option>
+                <option value="teaching">Teaching / Courses</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or what you're looking for..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .contact-info h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-intro {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .contact-method h3 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-dim);
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-method a {
+    font-size: 1.0625rem;
+  }
+
+  .contact-method p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .social-links a {
+    font-size: 1rem;
+  }
+
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .form-group label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    transition: border-color var(--transition-fast);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-text-dim);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .discord-details {
+    display: none;
+  }
+
+  .discord-details.visible {
+    display: block;
+  }
+
+  .discord-handle {
+    display: inline-block;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+  }
+
+  .discord-note {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .discord-reveal-btn {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('discord-btn');
+  const details = document.getElementById('discord-details');
+  if (btn && details) {
+    btn.addEventListener('click', () => {
+      details.classList.add('visible');
+      btn.style.display = 'none';
+    });
+  }
+</script>

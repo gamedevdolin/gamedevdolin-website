@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Interactive Fiction — Adam Dolin" description="Twine games and other interactive narratives by Adam Dolin.">
+
+  <section class="section">
+    <div class="container">
+      <a href="/work" class="back-link">&larr; Back to Work</a>
+
+      <div class="section-header">
+        <span class="label">Writing Samples</span>
+        <h1>Interactive Fiction</h1>
+        <p class="page-intro">Twine games and other interactive narratives.</p>
+      </div>
+
+      <div class="items-list">
+        <a href="/work/goblin-atelier" class="card item-card">
+          <span class="label">Twine</span>
+          <h2>The Goblin Atelier of Waterdeep</h2>
+          <p>A brief Twine adventure, in the style of Baldur's Gate 3. Used as a teaching example to help students learn Twine.</p>
+          <span class="project-link">Play &amp; learn more &rarr;</span>
+        </a>
+
+        <a href="https://adamdolin.itch.io/schrodinger" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">itch.io</span>
+          <h2>Schr&ouml;dinger</h2>
+          <p>A brief piece of interactive fiction that demonstrates the basics of writing in Yarn Spinner.</p>
+          <span class="project-link">Play on itch.io &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+
+  .page-intro {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  .items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .item-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition-base);
+  }
+
+  .item-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .item-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .item-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+</style>

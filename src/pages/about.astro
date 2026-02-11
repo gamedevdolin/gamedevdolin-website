@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Adam Dolin" description="Learn about Adam Dolin's career in narrative design and AAA game development.">
+
+  <section class="section">
+    <div class="container">
+      <div class="about-header">
+        <span class="label">About</span>
+        <h1>The short version: I tell stories in games.</h1>
+        <p class="about-intro">The longer version involves a lot of coffee, a lot of game scripts, and a decade of figuring out how narrative actually works inside a production pipeline.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-body">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Background</h2>
+          <p>
+            I started in the games industry as an intern at a voiceover studio. That led to years of work
+            as a dialogue editor and talent coordinator, where I learned the ins and outs of writing, mocap,
+            and VO pipelines for AAA games. Those early roles gave me a ground-level understanding of
+            how narrative moves through production — from script to screen — that most writers never get.
+          </p>
+          <p>
+            From there, I moved into casting and talent coordination at Sony PlayStation, dialogue supervision
+            at Sledgehammer Games (Call of Duty: Advanced Warfare), and eventually into narrative design
+            and writing roles at Santa Monica Studio and Guerrilla Games.
+          </p>
+          <p>
+            At Santa Monica Studio, I was a Narrative Designer and Writer on both <strong>God of War</strong> (2018) and
+            <strong>God of War: Ragnar&ouml;k</strong>. Our team won the 2019 WGA Award for Outstanding Video Game Writing
+            and The Game Awards Best Narrative, among other recognitions.
+          </p>
+          <p>
+            At Guerrilla Games, I worked on narrative for <strong>Horizon Forbidden West</strong>.
+            I've also held a Lead Narrative Designer position at Night School Studio.
+          </p>
+          <p>
+            These days I consult with studios and independent developers on narrative design, writing,
+            voice production, team dynamics, and more. I also teach game writing through ELVTR and speak
+            at industry events like GDC.
+          </p>
+
+          <h2>What I Believe</h2>
+          <p>
+            Good game narrative isn't about writing a movie script and handing it to a team. It's about
+            understanding how story lives inside systems, how players interact with it, and how to design
+            for both depth and distraction. I believe in trusting your audience, rewarding curiosity,
+            and building narrative that players discover rather than just consume.
+          </p>
+          <p>
+            I also believe teams tell better stories when they're healthy — when there's trust, clear communication,
+            and room for creative risk. A lot of my consulting work touches on team dynamics as much as it does craft.
+          </p>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="sidebar-card card">
+            <h3>Quick Facts</h3>
+            <ul class="facts-list">
+              <li><span class="fact-label">Based in</span> Los Angeles, CA</li>
+              <li><span class="fact-label">Experience</span> 10+ years in games</li>
+              <li><span class="fact-label">Specialties</span> Narrative Design, Writing, VO Direction</li>
+              <li><span class="fact-label">Teaching</span> ELVTR — Advanced Game Writing</li>
+              <li><span class="fact-label">Speaking</span> GDC, industry events</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card card">
+            <h3>Awards &amp; Recognition</h3>
+            <ul class="awards-list">
+              <li>The Game Awards — Best Narrative (God of War: Ragnar&ouml;k)</li>
+              <li>WGA Award — Outstanding Video Game Writing (God of War)</li>
+              <li>Multiple BAFTA nominations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .about-header {
+    max-width: 720px;
+  }
+
+  .about-header h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .about-intro {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .about-body {
+    padding-top: 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-text h2 {
+    font-size: 1.375rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .about-text h2:first-child {
+    margin-top: 0;
+  }
+
+  .about-text p {
+    color: var(--color-text-muted);
+    line-height: 1.75;
+  }
+
+  .about-text strong {
+    color: var(--color-white);
+    font-weight: 500;
+  }
+
+  .sidebar-card {
+    margin-bottom: var(--space-xl);
+  }
+
+  .sidebar-card h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .facts-list,
+  .awards-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .facts-list li {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .fact-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    margin-bottom: 2px;
+  }
+
+  .awards-list li {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    padding-left: var(--space-md);
+    position: relative;
+  }
+
+  .awards-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

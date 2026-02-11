@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="The Goblin Atelier of Waterdeep — Adam Dolin" description="A brief Twine adventure meant to emulate Larian Studios' writing test, used as a teaching example for game writing students.">
+
+  <section class="section">
+    <div class="container">
+      <a href="/work/interactive-fiction" class="back-link">&larr; Back to Interactive Fiction</a>
+
+      <div class="section-header">
+        <span class="label">Interactive Fiction</span>
+        <h1>The Goblin Atelier of Waterdeep</h1>
+      </div>
+
+      <div class="content-block">
+        <p>A brief Twine adventure in the style of Baldur's Gate 3. I use this as an example to help my students learn Twine and understand how interactive narrative branches work in practice.</p>
+        <p>The story is built in Twine and plays directly in your browser. It demonstrates branching dialogue, player choice, and how to structure an interactive writing sample for a studio application.</p>
+
+        <a href="/files/goblin-atelier-twine.html" target="_blank" rel="noopener" class="btn btn-primary play-btn">Play The Goblin Atelier &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+
+  .content-block {
+    max-width: 640px;
+    margin-top: var(--space-xl);
+  }
+
+  .content-block p {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .play-btn {
+    margin-top: var(--space-md);
+  }
+</style>
