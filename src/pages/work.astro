@@ -96,6 +96,13 @@ const speaking = [
     url: "https://drive.google.com/file/d/1CCbiCg09TVtac2rdiHcO8KZxpcFLtoLD/view?usp=sharing",
     note: "",
   },
+  {
+    title: "Adam Dolin & Jolie Menzel",
+    event: "Script Lock Podcast",
+    description: "An interview with Max and Nick Folkman on their wonderful game writing podcast, Script Lock.",
+    url: "https://scriptlock.simplecast.com/episodes/adam-dolin-jolie-menzel",
+    note: "",
+  },
 ];
 ---
 
@@ -136,12 +143,18 @@ const speaking = [
     </div>
   </section>
 
-  <!-- Teaching & Talks -->
+  <!-- Resources, Teaching, & Talks -->
   <section class="section speaking-section" style="padding-top: var(--space-2xl);">
     <div class="container">
-      <h2 class="subsection-title">Teaching &amp; Talks</h2>
+      <h2 class="subsection-title">Resources, Teaching, &amp; Talks</h2>
 
       <div class="grid grid-3">
+        <a href="https://docs.google.com/document/d/1yGvNaOc8CUEi5auDM4MBrOiyU_CirUV0tgkW3IIOPJA/edit?usp=sharing" target="_blank" rel="noopener" class="card talk-card">
+          <span class="talk-event">Resources</span>
+          <h3>Adam Recommends</h3>
+          <p>A living document of recommended resources for learning about game writing and narrative design. These resources have all helped and influenced me throughout my career, and I hope they do the same for you!</p>
+          <span class="project-link">View &rarr;</span>
+        </a>
         <div class="card talk-card elvtr-card">
           <span class="talk-event">ELVTR</span>
           <h3>Become a Game Writer</h3>
@@ -179,6 +192,7 @@ const speaking = [
         </a>
 
         <a href="https://gamedevkaraoke.com" target="_blank" rel="noopener" class="card personal-project-card">
+          <img src="/images/currentwork/gdk.jpg" alt="Game Dev Karaoke" class="project-card-image" />
           <span class="label">Web App</span>
           <h3>gamedevkaraoke.com</h3>
           <p>A website I built for an upcoming karaoke night during the Game Developer's Conference.</p>
@@ -421,6 +435,12 @@ const speaking = [
   }
 
   /* Personal Projects */
+  .project-card-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+  }
+
   .personal-project-card {
     text-decoration: none;
     display: flex;

@@ -15,8 +15,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="nda-note">Due to NDAs, I can't share actual scripts from the games I've worked on publicly — but here are links to playthroughs of some of the quests I wrote:</p>
         <ul class="playthrough-list">
           <li>
-            <strong>God of War (2018)</strong> — <a href="https://youtu.be/YENEb4YEVxg?si=Fb9ArZAqiPj6Ptlq&t=63" target="_blank" rel="noopener">The Anatomy of Hope</a> | <a href="https://www.youtube.com/playlist?list=PLw8qrSr2ZYiSDdfOhBMdmaUqhIAnlzzEk" target="_blank" rel="noopener">Playlist of all other God of War side quests</a>
+            <strong>God of War (2018)</strong> — <a href="https://youtu.be/YENEb4YEVxg?si=Fb9ArZAqiPj6Ptlq&t=63" target="_blank" rel="noopener">The Anatomy of Hope</a>
             <p class="playthrough-blurb">My favorite script I wrote for a God of War (2018) side quest. Kratos and Atreus' dialog during these boat conversations was directly influenced by my own experience of losing my father to cancer during the game's development in 2016. This quest holds a special place in my heart.</p>
+            <a href="https://www.youtube.com/playlist?list=PLw8qrSr2ZYiSDdfOhBMdmaUqhIAnlzzEk" target="_blank" rel="noopener">Playlist of all other God of War side quests</a>
           </li>
           <li>
             <strong>God of War Ragnar&ouml;k</strong> — <a href="https://www.youtube.com/watch?v=W32Y-kBS3uo" target="_blank" rel="noopener">The Song of the Sands</a>
@@ -33,11 +34,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <span class="project-link">Play &amp; learn more &rarr;</span>
         </a>
 
-        <a href="https://adamdolin.itch.io/schrodinger" target="_blank" rel="noopener" class="card item-card">
-          <span class="label">itch.io</span>
-          <h2>Schr&ouml;dinger</h2>
-          <p>A brief piece of interactive fiction that demonstrates the basics of writing in Yarn Spinner.</p>
-          <span class="project-link">Play on itch.io &rarr;</span>
+        <a href="https://www.netflix.com/house/experiences/stranger-things" target="_blank" rel="noopener" class="card item-card">
+          <span class="label">Netflix</span>
+          <h2>Stranger Things: The Experience</h2>
+          <p>I was a narrative design consultant on this interactive physical experience.</p>
+          <span class="project-link">Learn more &rarr;</span>
         </a>
       </div>
     </div>
@@ -79,7 +80,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-top: var(--space-md);
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-2xl);
   }
 
   .playthrough-list li {
@@ -102,7 +103,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .playthrough-blurb {
     font-size: 0.875rem;
     color: var(--color-text-muted);
-    margin-top: var(--space-xs);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
     line-height: 1.6;
     max-width: 640px;
   }
