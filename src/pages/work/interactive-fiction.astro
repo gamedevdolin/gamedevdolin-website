@@ -10,8 +10,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <div class="section-header">
         <span class="label">Writing Samples</span>
-        <h1>Interactive Fiction</h1>
-        <p class="page-intro">Twine games and other interactive narratives.</p>
+        <h1>Interactive</h1>
+        <p class="page-intro">Interactive narratives in multiple formats.</p>
+        <p class="nda-note">Due to NDAs, I can't share actual scripts from the games I've worked on publicly — but here are links to playthroughs of some of the quests I wrote:</p>
+        <ul class="playthrough-list">
+          <li>
+            <strong>God of War (2018)</strong> — <a href="https://youtu.be/YENEb4YEVxg?si=Fb9ArZAqiPj6Ptlq&t=63" target="_blank" rel="noopener">The Anatomy of Hope</a> | <a href="https://www.youtube.com/playlist?list=PLw8qrSr2ZYiSDdfOhBMdmaUqhIAnlzzEk" target="_blank" rel="noopener">Playlist of all other God of War side quests</a>
+            <p class="playthrough-blurb">My favorite script I wrote for a God of War (2018) side quest. Kratos and Atreus' dialog during these boat conversations was directly influenced by my own experience of losing my father to cancer during the game's development in 2016. This quest holds a special place in my heart.</p>
+          </li>
+          <li>
+            <strong>God of War Ragnar&ouml;k</strong> — <a href="https://www.youtube.com/watch?v=W32Y-kBS3uo" target="_blank" rel="noopener">The Song of the Sands</a>
+            <p class="playthrough-blurb">I'm particularly proud of this quest chain. With two potential companions (Atreus or Freya) across two different areas, this quest remains one of the most difficult I've ever written, both in terms of its logical complexity and ensuring that each version was equally compelling. The final script for this mission ended up around 70 pages.</p>
+          </li>
+        </ul>
       </div>
 
       <div class="items-list">
@@ -51,6 +62,47 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .page-intro {
     color: var(--color-text-muted);
     font-size: 1.0625rem;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  .nda-note {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-top: var(--space-lg);
+  }
+
+  .playthrough-list {
+    list-style: none;
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .playthrough-list li {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .playthrough-list a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .playthrough-list a:hover {
+    opacity: 0.8;
+  }
+
+  .playthrough-blurb {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
     line-height: 1.6;
     max-width: 640px;
   }

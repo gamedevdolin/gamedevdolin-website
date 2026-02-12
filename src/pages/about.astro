@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="about-header">
         <span class="label">About</span>
-        <h1>The short version: I love video games, so I decided to make them for a living.</h1>
+        <h1>The short version:<br>I love making video games.</h1>
       </div>
     </div>
   </section>
@@ -17,16 +17,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
-          <h2>Background</h2>
+          <h2>The long version</h2>
           <p>
             I started in the games industry as an intern at a voiceover studio. That led to years of work
             as a dialogue editor and talent coordinator, where I learned the ins and outs of writing, mocap,
-            and VO pipelines for AAA games. Those early roles gave me a ground-level understanding of
-            how narrative moves through production — from script to screen — that most writers never get.
+            and VO pipelines for AAA games. Those early roles gave me a holistic view of
+            how narrative moves through development — from script to speakers — that many writers never get.
           </p>
           <p>
-            From there, I moved into casting and talent coordination at Sony PlayStation, dialogue supervision
-            at Sledgehammer Games (Call of Duty: Advanced Warfare), and eventually into narrative design
+            From there, I moved into dialogue supervision at Sledgehammer Games (Call of Duty: Advanced Warfare), then casting and talent coordination at Sony PlayStation, and eventually into narrative design
             and writing roles at Santa Monica Studio and Guerrilla Games.
           </p>
           <p>
@@ -36,24 +35,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
           <p>
             At Guerrilla Games, I worked on narrative for <strong>Horizon Forbidden West</strong>.
-            I've also held a Lead Narrative Designer position at Night School Studio.
+            I've also held a Lead Narrative Designer position at Night School Studio, as part of Netflix Games.
           </p>
           <p>
             These days I consult with studios and independent developers on narrative design, writing,
-            voice production, team dynamics, and more. I also teach game writing through ELVTR and speak
+            voice production, interactive theater, team dynamics, and more. I also teach game writing through ELVTR and speak
             at industry events like GDC.
           </p>
 
           <h2>What I Believe</h2>
           <p>
-            Good game narrative isn't about writing a movie script and handing it to a team. It's about
-            understanding how story lives inside systems, how players interact with it, and how to design
-            for both depth and distraction. I believe in trusting your audience, rewarding curiosity,
-            and building narrative that players discover rather than just consume.
+            Good game narrative isn't about writing a script and handing it off to a team. It's about
+            understanding how narrative lives inside game loops and systems and how players interact with it. 
+            I believe in rewarding curiosity and creating an experience that sticks with players long after they've finished playing.
           </p>
           <p>
             I also believe teams tell better stories when they're healthy — when there's trust, clear communication,
-            and room for creative risk. A lot of my consulting work touches on team dynamics as much as it does craft.
+            and psychological safety. A lot of my consulting work touches on team dynamics as much as it does craft.
           </p>
         </div>
 
@@ -62,10 +60,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>Quick Facts</h3>
             <ul class="facts-list">
               <li><span class="fact-label">Based in</span> Los Angeles, CA</li>
-              <li><span class="fact-label">Experience</span> 10+ years in games</li>
+              <li><span class="fact-label">Experience</span> 16 years in games</li>
               <li><span class="fact-label">Specialties</span> Narrative Design, Writing, VO Direction</li>
-              <li><span class="fact-label">Teaching</span> ELVTR — Advanced Game Writing</li>
-              <li><span class="fact-label">Speaking</span> GDC, industry events</li>
+              <li><span class="fact-label">Favorite Food</span> Waffles</li>
+              <li><span class="fact-label">Favorite Beverage</span> Coffee</li>
+              <li><span class="fact-label">Favorite Time of Day</span> Sunset</li>
+              <li><span class="fact-label">Favorite Animal</span> <a href="/lily">My dog, Lily</a></li>
+              <li><span class="fact-label">Favorite Fictional Animal</span> Chocobo</li>
+              <li><span class="fact-label">Go-To Karaoke Song</span> Zombie by The Cranberries</li>
             </ul>
           </div>
 
@@ -163,6 +165,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     letter-spacing: 0.06em;
     color: var(--color-accent);
     margin-bottom: 2px;
+  }
+
+  .facts-list a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .facts-list a:hover {
+    opacity: 0.8;
   }
 
   .awards-list li {
