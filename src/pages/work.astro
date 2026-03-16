@@ -79,8 +79,9 @@ const speaking = [
     title: "Write Between the Lines",
     event: "GDC 2026 — Game Narrative Summit",
     description: "How to tell stories in a distracted, polarized, media illiterate world. Co-presented with Alexa Ray Corriea.",
-    url: "https://schedule.gdconf.com/session/write-between-the-lines-writing-games-for-a-media-illiterate-world/914283",
+    url: "/gdc2026",
     note: "",
+    internal: true,
   },
   {
     title: "Storytelling Through Systems",
@@ -165,12 +166,13 @@ const speaking = [
           </div>
         </div>
         {speaking.map((talk) => (
-          <a href={talk.url} target="_blank" rel="noopener" class="card talk-card">
+          <a href={talk.url} target={talk.internal ? undefined : "_blank"} rel={talk.internal ? undefined : "noopener"} class="card talk-card">
+            {talk.image && <img src={talk.image} alt={talk.title} class="talk-card-img" />}
             <span class="talk-event">{talk.event}</span>
             <h3>{talk.title}</h3>
             <p>{talk.description}</p>
             {talk.note && <span class="talk-note">{talk.note}</span>}
-            <span class="project-link">Watch &rarr;</span>
+            <span class="project-link">{talk.internal ? 'View' : 'Watch'} &rarr;</span>
           </a>
         ))}
       </div>
@@ -184,9 +186,10 @@ const speaking = [
       <p class="section-intro">Side projects, experiments, and things I build for fun.</p>
 
       <div class="grid grid-3">
-        <a href="https://whatrmyvalues.com" target="_blank" rel="noopener" class="card personal-project-card">
+        <a href="https://whataremycorevalues.org" target="_blank" rel="noopener" class="card personal-project-card">
+          <img src="/images/currentwork/WhatAreMyValues.jpg" alt="WhatAreMyCoreValues.org" class="project-card-image" />
           <span class="label">Web App</span>
-          <h3>whatrmyvalues.com</h3>
+          <h3>WhatAreMyCoreValues.org</h3>
           <p>An interactive values exploration tool to help people identify and prioritize what matters most to them.</p>
           <span class="project-link">Visit site &rarr;</span>
         </a>
@@ -345,6 +348,14 @@ const speaking = [
     text-decoration: none;
     color: inherit;
     transition: border-color var(--transition-base);
+    overflow: hidden;
+  }
+
+  .talk-card-img {
+    width: calc(100% + 2 * var(--space-lg));
+    margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-md);
+    height: 180px;
+    object-fit: cover;
   }
 
   .talk-card:hover {
