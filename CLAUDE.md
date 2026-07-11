@@ -6,6 +6,13 @@ Personal portfolio and consulting site for Adam Dolin — narrative designer, ga
 **Stack:** Astro 5.2 (SSG), vanilla CSS, deployed on Netlify
 **No frontend frameworks** — pure Astro components with minimal vanilla JS (mobile menu toggle, Discord reveal button).
 
+## Deployment
+
+- Netlify auto-deploys from GitHub: pushing/merging to `main` builds and publishes the site. There is no separate deploy step.
+- Never run `netlify deploy` manually — it publishes the local checkout as-is and can silently revert changes merged on GitHub.
+- `git pull` before starting any work: changes also land on `main` via Claude web/GitHub sessions, so the local checkout may be behind.
+- The contact form uses Netlify Forms (enabled on the Netlify project; submissions email adam@gamedevdolin.com and land on `/thanks`). Keep `data-netlify="true"` and the hidden `form-name` input intact when editing it.
+
 ## Architecture
 
 - **Pages** are in `src/pages/` using Astro file-based routing
@@ -38,6 +45,8 @@ Personal portfolio and consulting site for Adam Dolin — narrative designer, ga
 | `/contact` | Contact form and links |
 | `/lily` | Pug showcase |
 | `/gdc2026` | GDC 2026 talk details and slides |
+| `/thanks` | Contact form success page (form `action` target) |
+| `/404` | Custom not-found page (served for unknown URLs) |
 
 ## Conventions
 
