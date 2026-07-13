@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Games for Change 2026 panel: People Are Weird, Design Accordingly">
+  <defs>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0d0a0" stop-opacity="0.95"/>
+      <stop offset="18%" stop-color="#e8b898" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#e8a070" stop-opacity="0.32"/>
+      <stop offset="65%" stop-color="#d88878" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#d88878" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="horizon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7fb5c9"/>
+      <stop offset="30%" stop-color="#9aada0"/>
+      <stop offset="55%" stop-color="#d4a050"/>
+      <stop offset="78%" stop-color="#e8a070"/>
+      <stop offset="100%" stop-color="#d88878"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#1a1a1a"/>
+  <circle cx="800" cy="0" r="420" fill="url(#sun)"/>
+  <rect y="366" width="800" height="3" fill="url(#horizon)"/>
+
+  <text x="56" y="118" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="600" letter-spacing="4" fill="#9aada0">GAMES FOR CHANGE 2026</text>
+  <text x="56" y="196" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="#e8e8e8">People Are Weird,</text>
+  <text x="56" y="252" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="#e8e8e8">Design Accordingly</text>
+  <text x="56" y="330" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="24" fill="#e8a070">Panel &#183; July 22 &#183; 2:00 PM</text>
+</svg>
