@@ -29,6 +29,19 @@ const { title, description = 'Adam Dolin — Narrative Designer, Writer, and Gam
     <slot />
   </main>
   <Footer />
+
+  <script>
+    // Feed the cursor position to CSS as --mx / --my (0–100%) on any
+    // button or card under the pointer, powering the sunset highlights
+    // in global.css. One delegated listener covers the whole site.
+    document.addEventListener('mousemove', (e) => {
+      const el = (e.target as Element).closest?.('.btn, .card');
+      if (!el || !(el instanceof HTMLElement)) return;
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+      el.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+    });
+  </script>
 </body>
 </html>
 
