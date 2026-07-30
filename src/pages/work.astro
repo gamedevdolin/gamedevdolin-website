@@ -143,24 +143,33 @@ const speaking = [
     </div>
   </section>
 
-  <!-- Resources, Teaching, & Talks -->
-  <section class="section speaking-section" style="padding-top: var(--space-2xl);">
+  <!-- Resources -->
+  <section class="section speaking-section" id="resources" style="padding-top: var(--space-2xl);">
     <div class="container">
-      <h2 class="subsection-title">Resources, Teaching, &amp; Talks</h2>
+      <h2 class="subsection-title"><a href="/resources" class="heading-link">Resources</a></h2>
 
       <div class="grid grid-3">
         <a href="https://docs.google.com/document/d/1yGvNaOc8CUEi5auDM4MBrOiyU_CirUV0tgkW3IIOPJA/edit?usp=sharing" target="_blank" rel="noopener" class="card talk-card">
-          <span class="talk-event">Resources</span>
           <h3>Adam Recommends</h3>
           <p>A living document of recommended resources for learning about game writing and narrative design. These resources have all helped and influenced me throughout my career, and I hope they do the same for you!</p>
           <span class="project-link">View &rarr;</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talks & Teaching -->
+  <section class="section speaking-section" id="talks" style="padding-top: var(--space-2xl);">
+    <div class="container">
+      <h2 class="subsection-title"><a href="/talks" class="heading-link">Talks &amp; Teaching</a></h2>
+
+      <div class="grid grid-3">
         <div class="card talk-card elvtr-card">
           <span class="talk-event">ELVTR</span>
           <h3>Become a Game Writer</h3>
           <p>A 6-week online course where I share every lesson I've learned throughout my career on how to be a successful game writer.</p>
           <div class="elvtr-links">
-            <a href="https://us.elvtr.com/course/become-game-writer" target="_blank" rel="noopener" class="project-link">Learn More at ELVTR &rarr;</a>
+            <a href="https://elvtr.com/course/become-game-writer" target="_blank" rel="noopener" class="project-link">Learn More at ELVTR &rarr;</a>
             <a href="/files/elvtr-satisfaction-survey.pdf" target="_blank" rel="noopener" class="project-link">Student Satisfaction Survey &rarr;</a>
           </div>
         </div>
@@ -233,6 +242,20 @@ const speaking = [
     margin-bottom: var(--space-2xl);
     padding-bottom: var(--space-sm);
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .heading-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .heading-link:hover {
+    color: var(--color-accent);
+  }
+
+  #resources,
+  #talks {
+    scroll-margin-top: 90px;
   }
 
   /* Projects */
