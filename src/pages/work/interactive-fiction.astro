@@ -19,65 +19,54 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="passage-prompt">What would you like to play?</p>
           <div class="choice-list">
             <button class="choice" data-goto="quests">YouTube videos of quests I wrote</button>
-            <button class="choice" data-goto="twine">A Twine game I wrote for my class</button>
+            <a class="choice" href="/work/goblin-atelier">A Twine game I wrote for my class</a>
             <button class="choice" data-goto="netflix">Stranger Things: Face the Dark</button>
             <button class="choice" data-goto="values">A values quiz I designed</button>
           </div>
         </div>
 
         <div data-passage="quests" class="is-hidden">
-          <p class="nda-note">Due to NDAs, I can't share actual scripts from the games I've worked on publicly — but here are links to playthroughs of some of the quests I wrote. Hover over each for the story behind it.</p>
+          <p class="nda-note">Due to NDAs, I can't share actual scripts from the games I've worked on publicly — but here are links to playthroughs of some of the quests I wrote. Click each one for the story behind it.</p>
           <div class="fiction-entry">
-            <a href="https://youtu.be/YENEb4YEVxg?si=Fb9ArZAqiPj6Ptlq&t=63" target="_blank" rel="noopener" class="entry-title">
-              <strong>God of War (2018)</strong> — The Anatomy of Hope
-            </a>
+            <button class="entry-toggle" aria-expanded="false">
+              <strong>God of War (2018)</strong> — The Anatomy of&nbsp;Hope&nbsp;<span class="entry-chevron" aria-hidden="true">&#9656;</span>
+            </button>
             <div class="entry-context">
               <p>My favorite script I wrote for a God of War (2018) side quest. Kratos and Atreus' dialog during these boat conversations was directly influenced by my own experience of losing my father to cancer during the game's development in 2016. This quest holds a special place in my heart.</p>
-              <a href="https://www.youtube.com/playlist?list=PLw8qrSr2ZYiSDdfOhBMdmaUqhIAnlzzEk" target="_blank" rel="noopener">Playlist of all other God of War side quests</a>
+              <a href="https://youtu.be/YENEb4YEVxg?si=Fb9ArZAqiPj6Ptlq&t=63" target="_blank" rel="noopener" class="entry-cta">Watch a playthrough &rarr;</a>
             </div>
           </div>
           <div class="fiction-entry">
-            <a href="https://www.youtube.com/watch?v=W32Y-kBS3uo" target="_blank" rel="noopener" class="entry-title">
-              <strong>God of War Ragnar&ouml;k</strong> — The Song of the Sands
-            </a>
+            <button class="entry-toggle" aria-expanded="false">
+              <strong>God of War Ragnar&ouml;k</strong> — The Song of the&nbsp;Sands&nbsp;<span class="entry-chevron" aria-hidden="true">&#9656;</span>
+            </button>
             <div class="entry-context">
               <p>I'm particularly proud of this quest chain. With two potential companions (Atreus or Freya) across two different areas, this quest remains one of the most difficult I've ever written, both in terms of its logical complexity and ensuring that each version was equally compelling. The final script for this mission ended up around 70 pages.</p>
+              <a href="https://www.youtube.com/watch?v=W32Y-kBS3uo" target="_blank" rel="noopener" class="entry-cta">Watch a playthrough &rarr;</a>
             </div>
           </div>
-          <button class="choice choice-back" data-goto="start">&larr; Choose again</button>
-        </div>
-
-        <div data-passage="twine" class="is-hidden">
-          <div class="fiction-entry">
-            <a href="/work/goblin-atelier" class="entry-title">
-              <strong>The Goblin Atelier of Waterdeep</strong>
-            </a>
-            <div class="entry-context">
-              <p>A brief Twine adventure, in the style of Baldur's Gate 3. Used as a teaching example to help students learn Twine.</p>
-            </div>
-            <a href="/work/goblin-atelier" class="entry-cta">Enter it &rarr;</a>
-          </div>
+          <a href="https://www.youtube.com/playlist?list=PLw8qrSr2ZYiSDdfOhBMdmaUqhIAnlzzEk" target="_blank" rel="noopener" class="playlist-link">Playlist of all other God of War side quests</a>
           <button class="choice choice-back" data-goto="start">&larr; Choose again</button>
         </div>
 
         <div data-passage="netflix" class="is-hidden">
           <div class="fiction-entry">
-            <a href="https://www.netflix.com/house/experiences/stranger-things" target="_blank" rel="noopener" class="entry-title">
-              <strong>Stranger Things: Face the Dark</strong>
-            </a>
+            <button class="entry-toggle" aria-expanded="false">
+              <strong>Stranger Things: Face the&nbsp;Dark</strong>&nbsp;<span class="entry-chevron" aria-hidden="true">&#9656;</span>
+            </button>
             <div class="entry-context">
               <p>I consulted on narrative and game design for this escape room at Netflix House in Dallas.</p>
             </div>
-            <a href="https://www.netflix.com/house/experiences/stranger-things" target="_blank" rel="noopener" class="entry-cta">Learn more &rarr;</a>
+            <a href="https://www.netflix.com/house/experiences/stranger-things" target="_blank" rel="noopener" class="entry-cta">Learn more <svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span class="sr-only">(opens in a new tab)</span></a>
           </div>
           <button class="choice choice-back" data-goto="start">&larr; Choose again</button>
         </div>
 
         <div data-passage="values" class="is-hidden">
           <div class="fiction-entry">
-            <a href="https://whataremycorevalues.org" target="_blank" rel="noopener" class="entry-title">
-              <strong>WhatAreMyCoreValues.org</strong>
-            </a>
+            <button class="entry-toggle" aria-expanded="false">
+              <strong>WhatAreMyCoreValues.org</strong>&nbsp;<span class="entry-chevron" aria-hidden="true">&#9656;</span>
+            </button>
             <div class="entry-context">
               <p>An interactive values exploration tool — a quiz that helps you discover and rank your core values.</p>
             </div>
@@ -92,9 +81,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <script>
+  document.querySelectorAll('.entry-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const open = toggle.parentElement.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  });
+
   document.querySelectorAll('.choice').forEach((btn) => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.goto;
+      if (!target) return; // link-style choices navigate instead
       document.querySelectorAll('[data-passage]').forEach((p) => {
         p.classList.toggle('is-hidden', p.dataset.passage !== target);
       });
@@ -186,6 +183,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .choice {
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
     font: inherit;
     font-size: 0.9375rem;
     color: var(--color-accent);
@@ -273,18 +272,33 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     padding: var(--space-md) 0;
   }
 
-  .entry-title {
+  .entry-toggle {
+    font: inherit;
     font-size: 1.0625rem;
     color: var(--color-accent);
     text-decoration: underline;
     text-underline-offset: 2px;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
   }
 
-  .entry-title:hover {
+  .entry-chevron {
+    display: inline-block;
+    transition: transform var(--transition-base);
+  }
+
+  .fiction-entry.is-open .entry-chevron {
+    transform: rotate(90deg);
+  }
+
+  .entry-toggle:hover {
     opacity: 0.8;
   }
 
-  /* Context is collapsed by default and revealed on hover (or keyboard focus) */
+  /* Context is collapsed by default and revealed by clicking the title */
   .entry-context {
     max-height: 0;
     opacity: 0;
@@ -292,8 +306,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     transition: max-height var(--transition-base), opacity var(--transition-base);
   }
 
-  .fiction-entry:hover .entry-context,
-  .fiction-entry:focus-within .entry-context {
+  .fiction-entry.is-open .entry-context {
     max-height: 400px;
     opacity: 1;
   }
@@ -312,6 +325,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-top: var(--space-sm);
   }
 
+  .playlist-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-top: var(--space-md);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .playlist-link:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transform: translateX(3px);
+  }
+
   .entry-cta {
     display: inline-block;
     font-size: 0.8125rem;
@@ -319,5 +348,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     color: var(--color-accent);
     text-decoration: none;
     margin-top: var(--space-sm);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .entry-cta:hover,
+  .entry-context .entry-cta:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transform: translateX(3px);
+  }
+
+  /* Watch links inside the expanded story match the entry title size */
+  .entry-context .entry-cta {
+    font-size: 1.0625rem;
+  }
+
+  .ext-icon {
+    width: 0.85em;
+    height: 0.85em;
+    vertical-align: -0.08em;
+    margin-left: 0.2em;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

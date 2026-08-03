@@ -18,6 +18,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p>The story is built in Twine and plays directly in your browser. It demonstrates branching dialogue, player choice, and how to structure an interactive writing sample for a studio application.</p>
 
         <a href="/files/goblin-atelier-twine.html" target="_blank" rel="noopener" class="btn btn-primary play-btn">Play The Goblin Atelier &rarr;</a>
+        <a href="/work/interactive-fiction" class="choice-back">&larr; Choose again</a>
       </div>
     </div>
   </section>
@@ -52,5 +53,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .play-btn {
     margin-top: var(--space-md);
+  }
+
+  .choice-back {
+    display: block;
+    width: fit-content;
+    margin-top: var(--space-xl);
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border: 1px solid var(--color-text-muted);
+    border-radius: 6px;
+    padding: var(--space-sm) var(--space-md);
+    transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .choice-back:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
   }
 </style>
