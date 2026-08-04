@@ -7,8 +7,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="about-header">
-        <h2 class="about-short-label">The Short Version:</h2>
-        <h1>I love making video games.</h1>
+        <div class="about-header-text">
+          <h2 class="about-short-label">The Short Version:</h2>
+          <h1>I love making video games.</h1>
+        </div>
+        <img
+          class="about-headshot"
+          src="/images/about/headshot.jpg"
+          alt="Adam Dolin smiling with arms crossed, wearing glasses and a navy t-shirt"
+          width="1000"
+          height="1333"
+        />
       </div>
     </div>
   </section>
@@ -88,7 +97,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
   .about-header {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-header-text {
     max-width: 720px;
+  }
+
+  .about-headshot {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
   }
 
   .about-short-label {
@@ -204,6 +227,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   @media (max-width: 900px) {
     .about-grid {
       grid-template-columns: 1fr;
+    }
+
+    .about-header {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .about-headshot {
+      max-width: 400px;
     }
   }
 </style>
