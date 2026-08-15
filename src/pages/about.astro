@@ -7,17 +7,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="about-header">
-        <div class="about-header-text">
-          <h2 class="about-short-label">The Short Version:</h2>
-          <h1>I love making video games.</h1>
-        </div>
-        <img
-          class="about-headshot"
-          src="/images/about/headshot.jpg"
-          alt="Adam Dolin smiling with arms crossed, wearing glasses and a navy t-shirt"
-          width="1000"
-          height="1333"
-        />
+        <h2 class="about-short-label">The Short Version:</h2>
+        <h1>I love making video games.</h1>
       </div>
     </div>
   </section>
@@ -29,12 +20,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2>The Long Version:</h2>
           <p>
             I started in the games industry as an intern at a voiceover studio. That led to years of work
-            as a dialogue editor and talent coordinator, where I learned the ins and outs of writing, mocap,
-            and VO pipelines for AAA games. Those early roles gave me a holistic view of
-            how narrative moves through development — from script to speakers — that many writers never get.
+            as a dialogue editor and talent coordinator, where I learned the ins and outs of writing, motion and performance capture,
+            and VO pipelines for AAA games. Those early roles gave me <strong>a holistic view of
+            how narrative moves through development</strong> — from the script to playing in game — that many writers never get.
           </p>
           <p>
-            From there, I moved into dialogue supervision at Sledgehammer Games (Call of Duty: Advanced Warfare), then casting and talent coordination at Sony PlayStation, and eventually into narrative design
+            From there, I moved into dialogue supervision at Sledgehammer Games (<strong>Call of Duty: Advanced Warfare</strong>), then casting and talent coordination at Sony PlayStation, and eventually into narrative design
             and writing roles at Santa Monica Studio and Guerrilla Games.
           </p>
           <p>
@@ -44,27 +35,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
           <p>
             At Guerrilla Games, I worked on narrative for <strong>Horizon Forbidden West</strong>.
-            I've also held a Lead Narrative Designer position at Night School Studio, as part of <strong>Netflix Games</strong>.
+            I've also held a Lead Narrative Designer position at <strong>Night School Studio</strong>, as part of <strong>Netflix Games</strong>.
           </p>
           <p>
-            These days I consult with studios and independent developers on narrative design, writing,
+            These days I consult with studios and independent developers of all sizes on narrative design, writing,
             voice production, interactive theater, team dynamics, and more. I also teach game writing through ELVTR and speak
-            at industry events like GDC.
+            at industry events like GDC, Gamescom dev, and Games for Change.
           </p>
 
           <h2>What I Believe</h2>
           <p>
-            Good game narrative isn't about writing a script and handing it off to a team. It's about
-            understanding how narrative lives inside game loops and systems and how players interact with it. 
-            I believe in rewarding curiosity and creating an experience that sticks with players long after they've finished playing.
+            Good game narrative isn't achieved by writing an amazing script and handing it off for others to implement. It's about aligning with your team to
+            understand <strong>how narrative is experienced through the game's mechanics and systems,</strong> and how your players will engage with it.
           </p>
           <p>
-            I also believe teams tell better stories when they're healthy — when there's trust, clear communication,
+            I believe that by rewarding curiosity and utilizing a <strong>multi-disciplinary approach to narrative</strong>, teams can create an experience that will stick with players long after they've rolled credits.
+          </p>
+          <p>
+            I also believe <strong>teams tell better stories when they're healthy</strong> — when there's trust, clear communication, transparency,
             and psychological safety. A lot of my consulting work touches on team dynamics as much as it does craft.
           </p>
         </div>
 
         <div class="about-sidebar">
+          <img
+            class="about-headshot"
+            src="/images/about/headshot.jpg"
+            alt="Adam Dolin smiling with arms crossed, wearing glasses and a navy t-shirt"
+            width="1000"
+            height="1333"
+          />
+
           <div class="sidebar-card card">
             <h3>Quick Facts</h3>
             <ul class="facts-list">
@@ -80,14 +81,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </ul>
           </div>
 
-          <div class="sidebar-card card">
-            <h3>Awards &amp; Recognition</h3>
-            <ul class="awards-list">
-              <li>The Game Awards — Best Narrative (God of War: Ragnar&ouml;k)</li>
-              <li>WGA Award — Outstanding Video Game Writing (God of War)</li>
-              <li>Multiple BAFTA nominations</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -97,13 +90,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
   .about-header {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: var(--space-3xl);
-    align-items: start;
-  }
-
-  .about-header-text {
     max-width: 720px;
   }
 
@@ -112,6 +98,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     height: auto;
     border-radius: 12px;
     display: block;
+    margin-bottom: var(--space-xl);
   }
 
   .about-short-label {
@@ -226,10 +213,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   @media (max-width: 900px) {
     .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .about-header {
       grid-template-columns: 1fr;
       gap: var(--space-xl);
     }

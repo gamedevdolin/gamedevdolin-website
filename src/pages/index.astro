@@ -3,20 +3,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const studios = [
   {
+    name: "Turtle Rock Studios",
+    slug: "turtle-rock-studios",
+    logo: "/images/logos/turtlerock.jpg",
+    projects: [
+      { title: "Turtle Rock Studios", role: "Narrative Lead", year: "" },
+    ],
+  },
+  {
     name: "Santa Monica Studio",
     slug: "santa-monica-studio",
     logo: "/images/logos/santa.png",
     projects: [
-      { title: "God of War: Ragnarök", role: "Narrative Designer & Writer", year: "2022" },
-      { title: "God of War (2018)", role: "Narrative Designer & Writer", year: "2018" },
+      { title: "God of War: Ragnarök", role: "Senior Writer", year: "2022" },
+      { title: "God of War (2018)", role: "Narrative Designer", year: "2018" },
     ],
   },
   {
     name: "Guerrilla Games",
     slug: "guerrilla-games",
-    logo: "/images/logos/guerrilla.png",
+    logo: "/images/logos/guerrilla.svg",
     projects: [
-      { title: "Horizon Forbidden West", role: "Narrative Designer", year: "2022" },
+      { title: "Horizon Forbidden West", role: "Senior Writer", year: "2022" },
+    ],
+  },
+  {
+    name: "Insomniac Games",
+    slug: "insomniac-games",
+    logo: "/images/logos/insomniac.svg",
+    projects: [
+      { title: "Insomniac Games", role: "Senior Writer", year: "" },
     ],
   },
   {
@@ -45,19 +61,11 @@ const studios = [
     ],
   },
   {
-    name: "Activision",
-    slug: "activision",
-    logo: "/images/logos/activision.png",
-    projects: [
-      { title: "Call of Duty: Advanced Warfare", role: "Dialog Supervisor", year: "2014" },
-    ],
-  },
-  {
     name: "2K Games",
     slug: "2k-games",
     logo: "/images/logos/2kgames.png",
     projects: [
-      { title: "2K Games", role: "Narrative Consultant", year: "" },
+      { title: "2K Games", role: "Audio and Narrative Consultant", year: "" },
     ],
   },
   {
@@ -65,37 +73,30 @@ const studios = [
     slug: "firaxis-games",
     logo: "/images/logos/firax3.png",
     projects: [
-      { title: "Firaxis Games", role: "Narrative Consultant", year: "" },
+      { title: "Firaxis Games", role: "Dialog Supervisor", year: "" },
     ],
   },
   {
     name: "SEGA",
     slug: "sega",
-    logo: "",
+    logo: "/images/logos/sega.svg",
     projects: [
       { title: "SEGA", role: "Narrative Consultant", year: "" },
     ],
   },
   {
-    name: "Netflix Games",
-    slug: "netflix-games",
-    logo: "",
+    name: "Netflix",
+    slug: "netflix",
+    logo: "/images/logos/netflix.svg",
     projects: [
-      { title: "Netflix Games", role: "Narrative Consultant", year: "" },
-    ],
-  },
-  {
-    name: "Turtle Rock Studios",
-    slug: "turtle-rock-studios",
-    logo: "",
-    projects: [
-      { title: "Turtle Rock Studios", role: "Narrative Consultant", year: "" },
+      { title: "Netflix", role: "Narrative Consultant", year: "" },
     ],
   },
   {
     name: "The Halp Network",
     slug: "the-halp-network",
-    logo: "",
+    logo: "/images/logos/halp.png",
+    url: "https://halpnet.com/",
     projects: [
       { title: "The Halp Network", role: "Narrative Consultant", year: "" },
     ],
@@ -112,11 +113,15 @@ const studios = [
         <div class="hero-content">
           <span class="label">Narrative Design &bull; Writing &bull; Creative Consulting</span>
           <h1>I help game makers tell better stories.</h1>
-          <p class="hero-sub">
+          <p class="hero-sub hero-lede">
             I'm Adam Dolin — a writer and designer of video games since 2009.
-            I've worked on titles like <strong>God of War</strong>, <strong>Horizon: Forbidden West</strong>,
-            and <strong>God of War: Ragnar&ouml;k</strong>. Now I consult with studios of all sizes
-            on narrative design, writing, and creative direction.
+          </p>
+          <p class="hero-sub">
+            I've worked on award-winning AAA titles like <strong>God of War</strong>, <strong>Horizon Forbidden West</strong>,
+            and <strong>God of War: Ragnar&ouml;k</strong>.
+          </p>
+          <p class="hero-sub">
+            Now I consult with studios of all sizes on narrative design, writing, and creative direction.
           </p>
           <div class="hero-actions">
             <a href="/work" class="btn btn-primary">See My Work</a>
@@ -204,7 +209,7 @@ const studios = [
           </div>
           <div class="work-card-body">
             <h3>God of War: Ragnar&ouml;k</h3>
-            <p class="work-role">Senior Narrative Designer &amp; Writer — Santa Monica Studio</p>
+            <p class="work-role">Senior Writer — Santa Monica Studio</p>
             <p class="work-desc">Winner of Best Narrative at The Game Awards. Contributed to the story, dialogue, and narrative systems for the sequel to the 2018 Game of the Year.</p>
           </div>
         </div>
@@ -215,7 +220,7 @@ const studios = [
           </div>
           <div class="work-card-body">
             <h3>God of War (2018)</h3>
-            <p class="work-role">Narrative Designer &amp; Writer — Santa Monica Studio</p>
+            <p class="work-role">Narrative Designer — Santa Monica Studio</p>
             <p class="work-desc">Winner of the 2019 WGA Award for Outstanding Video Game Writing and multiple BAFTA nominations.</p>
           </div>
         </div>
@@ -226,7 +231,7 @@ const studios = [
           </div>
           <div class="work-card-body">
             <h3>Horizon Forbidden West</h3>
-            <p class="work-role">Narrative Designer — Guerrilla Games</p>
+            <p class="work-role">Senior Writer — Guerrilla Games</p>
             <p class="work-desc">Worked on quest narrative and world storytelling for the open-world sequel to Horizon Zero Dawn.</p>
           </div>
         </div>
@@ -285,7 +290,7 @@ const studios = [
   </section>
 
   <!-- Studios / Industry Experience -->
-  <section class="section studios-section">
+  <section class="section studios-section" id="studios">
     <div class="container">
       <div class="section-header" style="text-align: center;">
         <span class="label">Industry Experience</span>
@@ -295,7 +300,12 @@ const studios = [
       <div class="studios-grid">
         {studios.map((studio) => (
           <div class="studio-card" data-studio={studio.slug}>
-            <a href={`/work#${studio.slug}`} class="studio-card-link">
+            <a
+              href={studio.url ?? `/work#${studio.slug}`}
+              class="studio-card-link"
+              target={studio.url ? "_blank" : undefined}
+              rel={studio.url ? "noopener" : undefined}
+            >
               <div class="studio-logo-wrap">
                 {studio.logo ? (
                   <img src={studio.logo} alt={studio.name} class="studio-logo" />
@@ -310,7 +320,7 @@ const studios = [
                     <span class="studio-project-role">{project.role}</span>
                   </div>
                 ))}
-                <span class="studio-view-link">View work &rarr;</span>
+                <span class="studio-view-link">{studio.url ? "Visit site" : "View work"} &rarr;</span>
               </div>
             </a>
           </div>
@@ -362,9 +372,20 @@ const studios = [
   }
 
   .hero-sub {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--color-text-muted);
     line-height: 1.7;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-lede {
+    font-size: 1.35rem;
+    color: var(--color-text);
+    font-weight: 450;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-sub:last-of-type {
     margin-bottom: var(--space-2xl);
   }
 

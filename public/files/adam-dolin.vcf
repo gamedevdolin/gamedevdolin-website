@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Dolin;Adam;;;
+FN:Adam Dolin
+TITLE:Narrative Designer & Creative Consultant
+ORG:GameDevDolin
+EMAIL;TYPE=INTERNET:adam@gamedevdolin.com
+URL:https://gamedevdolin.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/adamdolin/
+END:VCARD

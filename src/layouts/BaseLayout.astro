@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Adam Dolin — Narrative Designer, Writer, and Game Development Consultant. Credits include God of War, God of War: Ragnarok, and Horizon Forbidden West.' } = Astro.props;
+const { title, description = 'Adam Dolin — Narrative Designer, Writer, and Game Development Consultant. Credits include God of War, God of War: Ragnarök, and Horizon Forbidden West.' } = Astro.props;
+
+const ogImage = new URL('/images/logos/GDD_logo-1000px.png', Astro.site);
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -18,6 +21,27 @@ const { title, description = 'Adam Dolin — Narrative Designer, Writer, and Gam
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
   <title>{title}</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content="GameDevDolin" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Adam Dolin',
+    url: 'https://gamedevdolin.com',
+    image: ogImage.href,
+    jobTitle: 'Narrative Designer, Game Writer & Creative Consultant',
+    description: 'Narrative designer and game writer since 2009. Credits include God of War (2018), God of War: Ragnarök, and Horizon Forbidden West. Consults with studios on narrative design, writing, and creative direction.',
+    sameAs: ['https://www.linkedin.com/in/adamdolin/'],
+    knowsAbout: ['Narrative design', 'Game writing', 'Interactive fiction', 'Voiceover direction', 'Performance capture', 'Creative consulting'],
+  })} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet" />
