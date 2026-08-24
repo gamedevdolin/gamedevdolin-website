@@ -35,6 +35,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </nav>
 
         <a href="/" class="connect-home">Explore the full site</a>
+
+        <div class="connect-qr">
+          <a
+            href="https://www.linkedin.com/in/adamdolin/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Adam Dolin on LinkedIn"
+          >
+            <img src="/images/linkedin-qr.svg" alt="QR code linking to Adam Dolin's LinkedIn profile" width="160" height="160" />
+          </a>
+          <span>Scan to connect on LinkedIn</span>
+        </div>
       </div>
     </div>
   </section>
@@ -136,5 +148,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--color-text-dim);
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+
+  .connect-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-2xl);
+  }
+
+  .connect-qr img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    padding: var(--space-sm);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+
+  .connect-qr span {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
   }
 </style>
