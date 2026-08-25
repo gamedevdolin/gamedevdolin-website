@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sources = [
+  {
+    title: "Social Media, News Consumption, and Polarization: Evidence from a Field Experiment",
+    source: "American Economic Review (PDF)",
+    url: "https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.20191777",
+  },
+  {
+    title: "Video Games for Good: Active Perspective-Taking Fosters Empathy and Reduces Implicit Bias Toward Gendered Violence Victims",
+    source: "ScienceDirect",
+    url: "https://www.sciencedirect.com/science/article/pii/S1875952125000084#s0070",
+  },
+  {
+    title: "Study: An Abundance of Media Fuels Polarization",
+    source: "Yale Insights",
+    url: "https://insights.som.yale.edu/insights/study-an-abundance-of-media-fuels-polarization",
+  },
+  {
+    title: "Exploring the Impact of Internet Use on Memory and Attention Processes",
+    source: "International Journal of Environmental Research and Public Health (PDF)",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7766706/pdf/ijerph-17-09481.pdf",
+  },
+  {
+    title: "Presentation deck",
+    source: "DocSend",
+    url: "https://docsend.com/view/44ct2rjwr3d4u9yp",
+  },
+  {
+    title: "The Struggle for Human Attention: Between the Abuse of Social Media and Digital Wellbeing",
+    source: "PubMed Central",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7712353/",
+  },
+  {
+    title: "The State of Video Gaming in 2026",
+    source: "Matthew Ball / Epyllion",
+    url: "https://www.matthewball.co/all/presentation-the-state-of-video-gaming-in-2026",
+  },
+  {
+    title: "Lawmakers Hold Hearing on the Impact of Screen Time on Kids",
+    source: "C-SPAN",
+    url: "https://www.c-span.org/program/senate-committee/lawmakers-hold-hearing-on-the-impact-of-screen-time-on-kids/671683",
+  },
+  {
+    title: "Behavioral Sciences, Vol. 15, Issue 5, Article 583",
+    source: "MDPI",
+    url: "https://www.mdpi.com/2076-328X/15/5/583",
+  },
+  {
+    title: "Video Games Europe — Key Facts 2024",
+    source: "Video Games Europe (PDF)",
+    url: "https://www.videogameseurope.eu/wp-content/uploads/2025/08/VGE-2024-KF-2024.pdf",
+  },
+  {
+    title: "Social Cohesion and Inclusive Participation in a Polarised Europe",
+    source: "Eurofound",
+    url: "https://www.eurofound.europa.eu/en/publications/all/social-cohesion-and-inclusive-participation-in-a-polarised-europe",
+  },
+  {
+    title: "How Russia Turns Gamers into Fighters",
+    source: "RUSI",
+    url: "https://www.rusi.org/explore-our-research/publications/commentary/how-russia-turns-gamers-fighters",
+  },
+  {
+    title: "EA Pay: A Very Tall Chart",
+    source: "Game File",
+    url: "https://www.gamefile.news/p/ea-pay-very-tall-chart-2026",
+  },
+  {
+    title: "Political Polarization and Gridlock in Europe: New Evidence from High-Frequency Indices",
+    source: "SUERF",
+    url: "https://www.suerf.org/publications/suerf-policy-notes-and-briefs/political-polarization-and-gridlock-in-europe-new-evidence-from-high-frequency-indices/",
+  },
+];
+---
+
+<BaseLayout title="Write Between the Lines — gamescom 2026 | Adam Dolin">
+
+  <section class="section talk-hero">
+    <div class="container">
+      <span class="label">gamescom 2026 &bull; Cologne</span>
+      <h1>Write Between the Lines</h1>
+      <p class="talk-subtitle">Writing Games for a Polarized, Distracted, Media-Illiterate World</p>
+    </div>
+  </section>
+
+  <section class="section talk-body">
+    <div class="container">
+      <div class="talk-content">
+        <div class="talk-description">
+          <p>
+            Players today are more media-savvy than ever — and less media-literate than we'd like.
+            They consume narratives at an unprecedented rate but often lack the tools to engage
+            critically with the stories we tell. So how do we, as game developers,
+            meet them where they are?
+          </p>
+          <p>
+            Thanks to everyone who came out to the talk at gamescom 2026 in Cologne!
+            Below you'll find the session page, the slides, the values quiz, and every
+            source I referenced in the talk.
+          </p>
+          <p>
+            Enjoy!
+          </p>
+        </div>
+
+        <div class="talk-links">
+          <a href="https://bizcommunity.gamescom.global/event/gamescom-biz-2026/planning/UGxhbm5pbmdfNDUwOTU3NQ==" target="_blank" rel="noopener" class="btn btn-primary">
+            gamescom Session Page &rarr;
+          </a>
+          <a href="/files/GAMESCOM2026_WRITE BETWEEN THE LINES.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+            View the Slides (PDF)
+          </a>
+          <a href="https://whataremycorevalues.org" target="_blank" rel="noopener" class="btn btn-outline">
+            Take the Core Values Quiz &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="talk-image">
+        <img src="/images/currentwork/gamescom2026.png" alt="Write Between the Lines — gamescom 2026 Talk" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section sources-section">
+    <div class="container">
+      <details class="sources-fold">
+        <summary>
+          <span class="sources-title">Sources &amp; Further Reading</span>
+          <span class="sources-chevron" aria-hidden="true">&#9656;</span>
+        </summary>
+        <ul class="sources-list">
+          {sources.map((s) => (
+            <li>
+              <a href={s.url} target="_blank" rel="noopener">{s.title}</a>
+              <span class="source-org"> — {s.source}</span>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="back-link">
+        <a href="/">&larr; Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .talk-hero {
+    padding: var(--space-4xl) 0 var(--space-xl);
+  }
+
+  .talk-hero h1 {
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.03em;
+  }
+
+  .talk-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .talk-body .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .talk-description p {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .talk-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .talk-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+  }
+
+  /* Sources fold */
+  .sources-section {
+    padding-top: 0;
+  }
+
+  .sources-fold {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .sources-fold summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+    cursor: pointer;
+    list-style: none;
+    transition: background var(--transition-base);
+  }
+
+  .sources-fold summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .sources-fold summary:hover {
+    background: var(--color-surface);
+  }
+
+  .sources-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+
+  .sources-chevron {
+    color: var(--color-accent);
+    transition: transform var(--transition-base);
+  }
+
+  .sources-fold[open] .sources-chevron {
+    transform: rotate(90deg);
+  }
+
+  .sources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 var(--space-xl) var(--space-xl);
+  }
+
+  .sources-list li {
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .sources-list a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .sources-list a:hover {
+    color: var(--color-accent);
+  }
+
+  .source-org {
+    color: var(--color-text-dim);
+    font-size: 0.875rem;
+  }
+
+  .back-link a {
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .back-link a:hover {
+    color: var(--color-white);
+  }
+
+  @media (max-width: 768px) {
+    .talk-body .container {
+      grid-template-columns: 1fr;
+    }
+
+    .talk-image {
+      order: -1;
+    }
+  }
+</style>
